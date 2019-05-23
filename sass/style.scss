@@ -1,4 +1,4 @@
-
+@import "mixin";
 body{
     header{
         
@@ -179,7 +179,7 @@ body{
                             color: #aaaaaa;
                             font-family: Roboto;
                             font-size: 12px;
-                            font-weight: 600;
+                            font-weight: 400;
                             line-height: 15px;
                         }
                     } 
@@ -230,7 +230,7 @@ body{
                                     color: #aaaaaa;
                                     font-family: Roboto;
                                     font-size: 12px;
-                                    font-weight: 600;
+                                    font-weight: 500;
                                     line-height: 15px;
                                 }
                             }
@@ -240,7 +240,7 @@ body{
                         .derc2{
                             font-family: Roboto;
                             font-size: 16px;
-                            color: #aaaaaa;
+                            color: #797979;
         
                         }
                         .ctn{
@@ -278,36 +278,149 @@ body{
                 }
         
             }
+            
             .category{
-                
+                margin-bottom: 37px;
                 p{
-                    color: #333333;
-                    font-family: 'Oswald';
-                    font-size: 16px;
-                    font-weight: bold;
+                    @include sbarTitStyle;
                     margin: 50px 0px 30px 0px;
 
                 }
                 ul{
-                    padding-left: 17px;
                     list-style-type: square;
-                    li{
+                    @include newestUl;
+                }
+
+            }
+            .newest{
+                .newtit{
+                    @include sbarTitStyle;
+                    margin-bottom: 35px;
+                }
+                .newitem{
+                    margin-top: 30px;
+                    display: flex;
+                    flex-direction: row;
+                    img{
+                        width: 100px;
+                        height: 90px;
+                    }
+                    .info{
                         
-                        a{
-                            font-family: Roboto;
-                            color: #333333;
-                            text-decoration: none;
+                        padding: 0px 0px 0px 20px;
+                        font-family: Roboto;
+                        .qoute{
+                            
                             font-size: 16px;
+                            color: #333333;
+                        }
+                        .date{
+                            margin-top: 20px;
+                            font-size: 12px;
+                            color: #aaaaaa;
                         }
                     }
                 }
+                
             }
+            .archive{
+                margin-top: 50px;
+                p{
+                    @include sbarTitStyle;
+                }
+                ul{
+                    list-style-type: disc;
+                    
+                    @include newestUl;
+                }
+            }
+            .spaFad{
+                margin-top: 40px;
+            }
+            .tag{
+                p{
+                    @include sbarTitStyle;
+                    margin: 50px 0px 30px 0px;
+                }
+                .tagitems{
+                    display: flex;
+                    flex-flow: wrap;
+                    .makeTag{
+
+                        margin: 10px;
+                        position: relative;
+                        .line1{
+                            position: absolute;
+                            width: 16px;
+                            border-top: 1px solid #e3e3e3;
+                            transform: rotate(115deg);
+                            top:5px;
+                            left: -11px;
+                        }
+                        .line2{
+                            
+                            position: absolute;
+                            width: 16px;
+                            border-top: 1px solid #e3e3e3;
+                            transform: rotate(-115deg);
+                            bottom: 4px;
+                            left: -11px;
+                        }
+                        .tagBorder
+                        {
+                            font-family: Roboto;
+                            font-size: 14px;
+                            height: 30px;
+                            margin: 0px;
+                            color: #999999;
+
+                            padding: 5px 20px;
+                            border: 1px solid #e3e3e3;
+                            border-left: none;
+                            position: relative;
+                            &::before{
+                                
+                                content: '';
+                                width: 6px;
+                                height: 6px;
+                                border: 1px solid #e3e3e3;
+                                left: 5px;
+                                top:11px;
+                                border-radius: 50%;
+                                position: absolute;                 
+                            }
+    
+                        }
+                    }
+
+                }
+ 
+            }
+            .flickr{
+                
+                p{
+                    @include sbarTitStyle;
+                    margin: 40px 0px 30px 0px;
+                }
+                .flicimg{
+                    display: flex;
+                    flex-direction: row;
+                    flex-flow: wrap;
+                    justify-content: space-between;
+                    img{
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
         }
     }
+
 }
 
 // =================================================================================body=============================================
 /* roboto-condensed-regular - latin */
+
 @font-face {
     font-family: Roboto;
     font-style: normal;
@@ -353,4 +466,3 @@ body{
          url('../fonts/roboto-v19-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
   }
 
-  

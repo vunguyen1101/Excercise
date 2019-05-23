@@ -1,0 +1,25 @@
+@mixin sbarTitStyle {
+    color: #333333;
+    font-family: 'Oswald';
+    font-size: 16px;
+    font-weight: bold;
+}
+@mixin newestUl {
+    padding-left: 17px;
+    
+    li{
+        height: 44px;
+        border-bottom: 1px dotted #999999;
+        a{
+            line-height: 44px;
+            font-family: Roboto;
+            color: #333333;
+            text-decoration: none;
+            font-size: 16px;
+            span{
+                color:#999999;
+                margin-left: 10px;
+            }
+        }
+    }
+}
