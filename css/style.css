@@ -135,9 +135,13 @@ body .content {
             font-weight: 400;
             line-height: 15px; }
     body .content .headthum .ferari {
-      background-image: url("../images/pic1_03.jpg"); }
+      background-image: url("../images/pic1_03.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%; }
     body .content .headthum .nissan {
-      background-image: url("../images/pic3_05.jpg"); }
+      background-image: url("../images/pic3_05.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% 100% s; }
   body .content .row {
     display: flex;
     justify-content: space-between; }
@@ -183,6 +187,39 @@ body .content {
               font-family: Roboto;
               font-weight: 700;
               font-size: 16px; }
+    @media only screen and (max-width: 1024px) {
+      body .content .row .col-lg-8 {
+        flex-direction: column; }
+        body .content .row .col-lg-8 .subthum {
+          width: 100%; } }
+  body .content .pagination {
+    margin-top: 40px; }
+    body .content .pagination div {
+      line-height: 50px;
+      font-family: Roboto;
+      font-weight: bold;
+      font-size: 22px;
+      margin-right: 20px; }
+    body .content .pagination span {
+      display: flex;
+      justify-content: center;
+      margin-right: 20px;
+      line-height: 50px;
+      font-family: Roboto;
+      font-weight: bold;
+      font-size: 22px; }
+      body .content .pagination span:first-child:hover {
+        border: 1px solid #dddddd;
+        background-color: #ffffff; }
+      body .content .pagination span:last-child:hover {
+        border: 1px solid #dddddd;
+        background-color: #ffffff; }
+      body .content .pagination span:hover {
+        background-color: #f7dc23;
+        padding: 0px 20px; }
+      body .content .pagination span:first-child, body .content .pagination span:last-child {
+        font-weight: 400;
+        font-size: 22px; }
   body .content .sidebar {
     margin: 50px 0px 0px 0px; }
     body .content .sidebar .searchbar {
@@ -325,12 +362,139 @@ body .content {
       justify-content: space-between; }
       body .content .sidebar .flickr .flicimg img {
         margin-bottom: 10px; }
+body footer {
+  margin-top: 120px; }
+  body footer .container-fluid {
+    padding: 0px;
+    background-color: #1d2a49; }
+    body footer .container-fluid .footercontain {
+      padding: 0px;
+      background-image: url("../images/pixel_map.png");
+      background-size: 35% 50%;
+      background-repeat: no-repeat;
+      background-position: 0px 130px; }
+      body footer .container-fluid .footercontain .col-lg-3 {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column; }
+        body footer .container-fluid .footercontain .col-lg-3:first-child {
+          position: relative; }
+        body footer .container-fluid .footercontain .col-lg-3 .autusblock {
+          position: absolute;
+          top: -15px;
+          margin-bottom: 30px; }
+        body footer .container-fluid .footercontain .col-lg-3 p {
+          color: #ffffff;
+          font-family: 'Oswald';
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 40px; }
+        body footer .container-fluid .footercontain .col-lg-3 .text {
+          color: #989ba6;
+          font-size: 16px;
+          font-family: Roboto;
+          font-weight: 300;
+          margin: 62px 0px 60px 0px; }
+          body footer .container-fluid .footercontain .col-lg-3 .text span {
+            color: #22a3f5;
+            text-decoration: underline;
+            cursor: pointer; }
+        body footer .container-fluid .footercontain .col-lg-3 .media {
+          display: flex;
+          flex-direction: column; }
+          body footer .container-fluid .footercontain .col-lg-3 .media p {
+            color: #ffffff;
+            font-family: 'Oswald';
+            font-size: 16px;
+            font-weight: bold; }
+          body footer .container-fluid .footercontain .col-lg-3 .media .mediablock img {
+            margin-right: 15px; }
+        body footer .container-fluid .footercontain .col-lg-3 .contactline {
+          margin-bottom: 10px;
+          display: flex;
+          flex-direction: row; }
+          body footer .container-fluid .footercontain .col-lg-3 .contactline:last-child .contactinfo {
+            color: #22a3f5;
+            cursor: pointer; }
+          body footer .container-fluid .footercontain .col-lg-3 .contactline:last-child {
+            color: #22a3f5;
+            cursor: pointer; }
+          body footer .container-fluid .footercontain .col-lg-3 .contactline .contactinfo {
+            margin-left: 15px;
+            color: #989ba6;
+            font-size: 16px;
+            font-family: Roboto; }
+        body footer .container-fluid .footercontain .col-lg-3 .infoblock {
+          margin-top: 30px;
+          display: flex;
+          flex-direction: row;
+          padding-top: 20px;
+          border-top: 1px solid #34405c; }
+          body footer .container-fluid .footercontain .col-lg-3 .infoblock .infoline {
+            margin-left: 15px;
+            color: #ffffff;
+            font-size: 16px;
+            font-family: Roboto; }
+            body footer .container-fluid .footercontain .col-lg-3 .infoblock .infoline span {
+              color: #f7dc23;
+              text-decoration: underline; }
+        body footer .container-fluid .footercontain .col-lg-3 .workingday {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          border-top: 1px dashed #34405c;
+          font-size: 16px;
+          font-family: Roboto;
+          color: #989ba6;
+          padding: 10px 0px; }
+        body footer .container-fluid .footercontain .col-lg-3 .emailform {
+          display: flex;
+          flex-direction: row; }
+          body footer .container-fluid .footercontain .col-lg-3 .emailform input {
+            width: 80%;
+            height: 50px;
+            color: #a9a9a9;
+            line-height: 50px;
+            font-family: Roboto;
+            font-size: 16px;
+            padding-left: 20px; }
+          body footer .container-fluid .footercontain .col-lg-3 .emailform .wave {
+            background-color: #f7dc23;
+            padding: 13px 20px; }
+        body footer .container-fluid .footercontain .col-lg-3 .getlastest {
+          color: #858996;
+          font-family: Roboto;
+          padding: 15px 0px 30px 0px;
+          border-bottom: 1px solid #34405c; }
+        body footer .container-fluid .footercontain .col-lg-3 .lasimg {
+          margin-top: 35px;
+          display: flex;
+          justify-content: space-around; }
+    body footer .container-fluid .copyright {
+      margin-top: 85px;
+      background-color: #1a2642; }
+      body footer .container-fluid .copyright .last {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        line-height: 80px;
+        height: 80px;
+        color: #9295a1; }
+        body footer .container-fluid .copyright .last .rightcopy {
+          font-family: 'Oswald';
+          font-size: 16px; }
+          body footer .container-fluid .copyright .last .rightcopy span {
+            margin-left: 40px; }
+        body footer .container-fluid .copyright .last .leftcopy {
+          font-size: 14px; }
+          body footer .container-fluid .copyright .last .leftcopy a {
+            color: #ffffff;
+            text-decoration: none; }
 
 /* roboto-condensed-regular - latin */
 @font-face {
   font-family: Roboto;
   font-style: normal;
-  font-weight: 400;
   src: url("../fonts/roboto-condensed/roboto-condensed-v17-latin-regular.eot");
   /* IE9 Compat Modes */
   src: local("Roboto Condensed"), local("RobotoCondensed-Regular"), url("../fonts/roboto-condensed/roboto-condensed-v17-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-condensed/roboto-condensed-v17-latin-regular.woff2") format("woff2"), url("../fonts/roboto-condensed/roboto-condensed-v17-latin-regular.woff") format("woff"), url("../fonts/roboto-condensed/roboto-condensed-v17-latin-regular.ttf") format("truetype"), url("../fonts/roboto-condensed/roboto-condensed-v17-latin-regular.svg#RobotoCondensed") format("svg");
