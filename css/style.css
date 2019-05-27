@@ -1,5 +1,78 @@
 body header {
   width: 100%; }
+  body header .hamburger {
+    /*
+     * And let's slide it in from the left
+     */ }
+    body header .hamburger a {
+      text-decoration: none;
+      color: #232323;
+      transition: color 0.3s ease; }
+      body header .hamburger a:hover {
+        color: tomato; }
+    body header .hamburger #menuToggle {
+      display: block;
+      position: relative;
+      top: 50px;
+      left: 50px;
+      z-index: 1;
+      -webkit-user-select: none;
+      user-select: none; }
+      body header .hamburger #menuToggle input {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+        cursor: pointer;
+        opacity: 0;
+        /* hide this */
+        z-index: 2;
+        /* and place it over the hamburger */
+        -webkit-touch-callout: none; }
+      body header .hamburger #menuToggle span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: #cdcdcd;
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
+        body header .hamburger #menuToggle span:first-child {
+          transform-origin: 0% 0%; }
+        body header .hamburger #menuToggle span:nth-last-child(2) {
+          transform-origin: 0% 100%; }
+      body header .hamburger #menuToggle input:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #232323; }
+        body header .hamburger #menuToggle input:checked ~ span:nth-last-child(3) {
+          opacity: 0;
+          transform: rotate(0deg) scale(0.2, 0.2); }
+        body header .hamburger #menuToggle input:checked ~ span:nth-last-child(2) {
+          transform: rotate(-45deg) translate(0, -1px); }
+    body header .hamburger #menu {
+      position: absolute;
+      width: 300px;
+      margin: -100px 0 0 -50px;
+      padding: 50px;
+      padding-top: 125px;
+      background: #ededed;
+      list-style-type: none;
+      -webkit-font-smoothing: antialiased;
+      /* to stop flickering of text in safari */
+      transform-origin: 0% 0%;
+      transform: translate(-100%, 0);
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
+      body header .hamburger #menu li {
+        padding: 10px 0;
+        font-size: 22px; }
+    body header .hamburger #menuToggle input:checked ~ ul {
+      transform: none; }
   body header .upper {
     display: flex;
     margin-top: 0;
@@ -64,6 +137,15 @@ body header {
       width: 247px;
       height: 100px;
       background-image: url("../images/freecall_03.jpg"); }
+  @media only screen and (max-width: 1200px) {
+    body header .bot {
+      flex-flow: wrap; } }
+@media only screen and (max-width: 768px) {
+  body header .upper, body header .bot {
+    display: none; } }
+@media only screen and (min-width: 769px) {
+  body header .hamburger {
+    display: none; } }
 body .brimage {
   width: 100%;
   height: 300px;
@@ -364,81 +446,81 @@ body .content {
         margin-bottom: 10px; }
 body footer {
   margin-top: 120px; }
-  body footer .container-fluid {
+  body footer .background {
     padding: 0px;
     background-color: #1d2a49; }
-    body footer .container-fluid .footercontain {
+    body footer .background .footercontain {
       padding: 0px;
       background-image: url("../images/pixel_map.png");
       background-size: 35% 50%;
       background-repeat: no-repeat;
       background-position: 0px 130px; }
-      body footer .container-fluid .footercontain .col-lg-3 {
+      body footer .background .footercontain .col-lg-3 {
         margin-top: 80px;
         display: flex;
         flex-direction: column; }
-        body footer .container-fluid .footercontain .col-lg-3:first-child {
+        body footer .background .footercontain .col-lg-3:first-child {
           position: relative; }
-        body footer .container-fluid .footercontain .col-lg-3 .autusblock {
+        body footer .background .footercontain .col-lg-3 .autusblock {
           position: absolute;
           top: -15px;
           margin-bottom: 30px; }
-        body footer .container-fluid .footercontain .col-lg-3 p {
+        body footer .background .footercontain .col-lg-3 p {
           color: #ffffff;
           font-family: 'Oswald';
           font-size: 16px;
           font-weight: bold;
           margin-bottom: 40px; }
-        body footer .container-fluid .footercontain .col-lg-3 .text {
+        body footer .background .footercontain .col-lg-3 .text {
           color: #989ba6;
           font-size: 16px;
           font-family: Roboto;
           font-weight: 300;
           margin: 62px 0px 60px 0px; }
-          body footer .container-fluid .footercontain .col-lg-3 .text span {
+          body footer .background .footercontain .col-lg-3 .text span {
             color: #22a3f5;
             text-decoration: underline;
             cursor: pointer; }
-        body footer .container-fluid .footercontain .col-lg-3 .media {
+        body footer .background .footercontain .col-lg-3 .media {
           display: flex;
           flex-direction: column; }
-          body footer .container-fluid .footercontain .col-lg-3 .media p {
+          body footer .background .footercontain .col-lg-3 .media p {
             color: #ffffff;
             font-family: 'Oswald';
             font-size: 16px;
             font-weight: bold; }
-          body footer .container-fluid .footercontain .col-lg-3 .media .mediablock img {
+          body footer .background .footercontain .col-lg-3 .media .mediablock img {
             margin-right: 15px; }
-        body footer .container-fluid .footercontain .col-lg-3 .contactline {
+        body footer .background .footercontain .col-lg-3 .contactline {
           margin-bottom: 10px;
           display: flex;
           flex-direction: row; }
-          body footer .container-fluid .footercontain .col-lg-3 .contactline:last-child .contactinfo {
+          body footer .background .footercontain .col-lg-3 .contactline:last-child .contactinfo {
             color: #22a3f5;
             cursor: pointer; }
-          body footer .container-fluid .footercontain .col-lg-3 .contactline:last-child {
+          body footer .background .footercontain .col-lg-3 .contactline:last-child {
             color: #22a3f5;
             cursor: pointer; }
-          body footer .container-fluid .footercontain .col-lg-3 .contactline .contactinfo {
+          body footer .background .footercontain .col-lg-3 .contactline .contactinfo {
             margin-left: 15px;
             color: #989ba6;
             font-size: 16px;
             font-family: Roboto; }
-        body footer .container-fluid .footercontain .col-lg-3 .infoblock {
+        body footer .background .footercontain .col-lg-3 .infoblock {
           margin-top: 30px;
           display: flex;
           flex-direction: row;
           padding-top: 20px;
           border-top: 1px solid #34405c; }
-          body footer .container-fluid .footercontain .col-lg-3 .infoblock .infoline {
+          body footer .background .footercontain .col-lg-3 .infoblock .infoline {
             margin-left: 15px;
             color: #ffffff;
             font-size: 16px;
             font-family: Roboto; }
-            body footer .container-fluid .footercontain .col-lg-3 .infoblock .infoline span {
+            body footer .background .footercontain .col-lg-3 .infoblock .infoline span {
               color: #f7dc23;
               text-decoration: underline; }
-        body footer .container-fluid .footercontain .col-lg-3 .workingday {
+        body footer .background .footercontain .col-lg-3 .workingday {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
@@ -447,10 +529,10 @@ body footer {
           font-family: Roboto;
           color: #989ba6;
           padding: 10px 0px; }
-        body footer .container-fluid .footercontain .col-lg-3 .emailform {
+        body footer .background .footercontain .col-lg-3 .emailform {
           display: flex;
           flex-direction: row; }
-          body footer .container-fluid .footercontain .col-lg-3 .emailform input {
+          body footer .background .footercontain .col-lg-3 .emailform input {
             width: 80%;
             height: 50px;
             color: #a9a9a9;
@@ -458,36 +540,36 @@ body footer {
             font-family: Roboto;
             font-size: 16px;
             padding-left: 20px; }
-          body footer .container-fluid .footercontain .col-lg-3 .emailform .wave {
+          body footer .background .footercontain .col-lg-3 .emailform .wave {
             background-color: #f7dc23;
             padding: 13px 20px; }
-        body footer .container-fluid .footercontain .col-lg-3 .getlastest {
+        body footer .background .footercontain .col-lg-3 .getlastest {
           color: #858996;
           font-family: Roboto;
           padding: 15px 0px 30px 0px;
           border-bottom: 1px solid #34405c; }
-        body footer .container-fluid .footercontain .col-lg-3 .lasimg {
+        body footer .background .footercontain .col-lg-3 .lasimg {
           margin-top: 35px;
           display: flex;
           justify-content: space-around; }
-    body footer .container-fluid .copyright {
+    body footer .background .copyright {
       margin-top: 85px;
       background-color: #1a2642; }
-      body footer .container-fluid .copyright .last {
+      body footer .background .copyright .last {
         padding: 0;
         display: flex;
         justify-content: space-between;
         line-height: 80px;
         height: 80px;
         color: #9295a1; }
-        body footer .container-fluid .copyright .last .rightcopy {
+        body footer .background .copyright .last .rightcopy {
           font-family: 'Oswald';
           font-size: 16px; }
-          body footer .container-fluid .copyright .last .rightcopy span {
+          body footer .background .copyright .last .rightcopy span {
             margin-left: 40px; }
-        body footer .container-fluid .copyright .last .leftcopy {
+        body footer .background .copyright .last .leftcopy {
           font-size: 14px; }
-          body footer .container-fluid .copyright .last .leftcopy a {
+          body footer .background .copyright .last .leftcopy a {
             color: #ffffff;
             text-decoration: none; }
 
